@@ -16,7 +16,7 @@ int main(int argc, const char * argv[])
     [m1 setPaisa:54];
   //  [m1 Rs];
   //  NSLog(@"Rs = %d",m1.Rs);
-  //  NSLog(@"Rs = %@",[m1 Rs]);
+    NSLog(@"Rs = %d",[m1 rs]);
     [m1 showPaisa];
     return 0;
 }
