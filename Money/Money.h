@@ -26,4 +26,5 @@
 -(Money*) differenceWithMoney:(Money*)m;
 -(Money*) multiplyWithMoney:(int)no;
 
+-(NSString*) description;
 @end

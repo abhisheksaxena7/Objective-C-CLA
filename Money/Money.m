@@ -102,4 +102,8 @@
     return temp;
 }
 
+-(NSString*) description
+{
+    return [NSString stringWithFormat:@"%d.%d", self.rs,self->paisa];
+}
 @end

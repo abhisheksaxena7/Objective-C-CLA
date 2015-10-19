@@ -22,29 +22,29 @@ int main(int argc, const char * argv[])
     [m2 showBoth];
     
     Money *m3 = [[Money alloc]initWithRs:5 Paisa:72];
-    [m3 showBoth];
+    NSLog(@"Amount = %@",m3);
     
     Money *m4 = [[Money alloc]initWithRs:10];
-    [m4 showBoth];
+    NSLog(@"Amount = %@",m4);
     
     Money *m5 = [[Money alloc]initWithPaisa:204];
-    [m5 showBoth];
-    
+    NSLog(@"Amount = %@",m5);
+
     Money *m6 = [[Money alloc]initWithMoney:m1];
-    [m6 showBoth];
-    
+    NSLog(@"Amount = %@",m6);
+
     Money *m7 = [Money moneyWithMoney:m5 ];
-    [m7 showBoth];
-    
+    NSLog(@"Amount = %@",m7);
+
     m7 = [m1 addMoney:m3];
-    [m7 showBoth];
+    NSLog(@"Amount = %@",m7);
     
     m6 = [m5 differenceWithMoney:m1];
-    [m6 showBoth];
-    
+    NSLog(@"Amount = %@",m6);
+
     m5 = [m1 multiplyWithMoney:5];
-    [m5 showBoth];
-    
+    NSLog(@"Amount = %@",m5);
+
     return 0;
 }
 
