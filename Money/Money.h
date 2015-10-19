@@ -13,9 +13,17 @@
 -(void) setPaisa:(int)p;
 -(void) showPaisa;
 -(void) showBoth;
+
 -(id) init;
 -(id) initWithRs:(int)r Paisa:(int)p;
 -(id) initWithRs:(int)r;
 -(id) initWithPaisa:(int)p;
 -(id) initWithMoney:(Money*)m;
+
++(Money*) moneyWithMoney:(Money*)m;
+
+-(Money*) addMoney:(Money*)m;
+-(Money*) differenceWithMoney:(Money*)m;
+-(Money*) multiplyWithMoney:(int)no;
+
 @end

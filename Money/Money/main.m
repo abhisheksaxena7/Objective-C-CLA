@@ -33,6 +33,18 @@ int main(int argc, const char * argv[])
     Money *m6 = [[Money alloc]initWithMoney:m1];
     [m6 showBoth];
     
+    Money *m7 = [Money moneyWithMoney:m5 ];
+    [m7 showBoth];
+    
+    m7 = [m1 addMoney:m3];
+    [m7 showBoth];
+    
+    m6 = [m5 differenceWithMoney:m1];
+    [m6 showBoth];
+    
+    m5 = [m1 multiplyWithMoney:5];
+    [m5 showBoth];
+    
     return 0;
 }
 

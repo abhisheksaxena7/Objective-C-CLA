@@ -58,4 +58,48 @@
 {
     return ([self initWithRs:m.rs Paisa:m->paisa]);
 }
+
++(Money *)moneyWithMoney:(Money *)m
+{
+    return [[Money alloc]initWithRs:[m rs] Paisa:m->paisa];
+}
+
+-(Money*)addMoney:(Money *)m
+{
+    Money * temp = [[Money alloc]init];
+    temp.rs = self.rs + m.rs;
+    temp->paisa = self->paisa + m->paisa;
+    if(temp->paisa>=100)
+    {
+        temp->paisa%=100;
+        temp.rs++;
+    }
+    return temp;
+}
+
+-(Money*) differenceWithMoney:(Money *)m
+{
+    Money * temp = [[Money alloc]init];
+    int n1,n2,n3;
+    n1 = self.rs*100+self->paisa;
+    n2 = m.rs*100+m->paisa;
+    n3 = n2-n1;
+    temp.rs = n3/100;
+    temp->paisa = n3%100;
+    return temp;
+}
+
+-(Money*)multiplyWithMoney:(int)no
+{
+    Money * temp = [[Money alloc]init];
+    temp.rs = self.rs*no;
+    temp->paisa = self->paisa*no;
+    if(temp->paisa>=100)
+    {
+        temp.rs += (temp->paisa/100);
+        temp->paisa%=100;
+    }
+    return temp;
+}
+
 @end
