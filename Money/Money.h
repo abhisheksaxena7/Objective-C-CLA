@@ -12,4 +12,10 @@
 @property int rs;
 -(void) setPaisa:(int)p;
 -(void) showPaisa;
+-(void) showBoth;
+-(id) init;
+-(id) initWithRs:(int)r Paisa:(int)p;
+-(id) initWithRs:(int)r;
+-(id) initWithPaisa:(int)p;
+-(id) initWithMoney:(Money*)m;
 @end
