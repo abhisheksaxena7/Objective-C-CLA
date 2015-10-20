@@ -14,6 +14,6 @@ int main(int argc, const char * argv[]) {
     Two *t = [[Two alloc]init];
     [t setX:5 Y:10];
     [t showXY];
-    
+    [t display];    //calling the over-ridden method
     return 0;
 }

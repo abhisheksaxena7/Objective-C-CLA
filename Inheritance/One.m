@@ -20,4 +20,8 @@
 {
     NSLog(@"x = %d",x);
 }
+-(void) display
+{
+    NSLog(@"I'm one");
+}
 @end

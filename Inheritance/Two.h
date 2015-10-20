@@ -11,4 +11,5 @@
 @interface Two : One
 -(void) setX:(int)a Y:(int)b;
 -(void) showXY;
+-(void) display;
 @end

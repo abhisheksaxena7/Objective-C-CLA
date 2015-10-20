@@ -22,4 +22,8 @@
     [self showX];
     NSLog(@"y = %d",y);
 }
+-(void) display
+{
+    NSLog(@"I'm two");
+}
 @end

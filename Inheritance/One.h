@@ -11,4 +11,5 @@
 @interface One : NSObject
 -(void) setX:(int)a;
 -(void) showX;
+-(void) display;
 @end
