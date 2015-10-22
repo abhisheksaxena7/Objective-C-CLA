@@ -1,4 +1,3 @@
-//
 //  main.m
 //  Strings
 //
@@ -40,11 +39,37 @@ int main(int argc, const char * argv[]) {
     NSLog(@"%@",[str stringByPaddingToLength:5 withString:@"." startingAtIndex:0]);
 
     temp = @"abcdefg";
-    NSRange range = [temp rangeOfString:@"cdefg"];
+    NSRange range = [temp rangeOfString:@"cdefg"];                      //find and return the range of the first occurrence of a given string within the receiver
     NSLog(@"Location: %lu, length: %lu",range.location,range.length);
     
     NSRange range1 = {0,4};
     NSLog(@"%@",[s1 substringWithRange:range1]);
- 
+    
+    NSString *list = @"Karan, Karim, Dauwood";;
+    NSArray *listItems = [list componentsSeparatedByString:@","];
+    for(int i=0;i<listItems.count;i++)
+    {
+        NSLog(@"%@",[listItems objectAtIndex:i]);
+    }
+    
+    str = @"A~B^C";
+    listItems = [str componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"~^"]];
+    NSLog(@"%@",listItems);
+    
+    listItems = [NSArray arrayWithObjects:@"Here",@"be",@"dragons",nil];
+    NSLog(@"%@",[listItems componentsJoinedByString:@" "]);
+    
+    NSLog(@"%@",[temp substringFromIndex:2]);       //From the index till the end
+    NSLog(@"%@",[temp substringToIndex:2]);         //From the start till the index, not including the one at the index
+    
+    NSLog(@"%@",[temp stringByReplacingOccurrencesOfString:@"cd" withString:@"xx"]);
+    
+    NSLog(@"%ld",(long)[temp caseInsensitiveCompare:@"AbCdEfg"]);
+    NSLog(@"%ld",(long)[temp compare:@"abcDefg"]);
+    NSLog(@"%hhd",[temp isEqualToString:@"abcdefg"]);
+    
+    NSLog(@"%hhd",[temp hasPrefix:@"abc"]);
+    NSLog(@"%hhd",[temp hasSuffix:@"fg"]);
+    
     return 0;
 }
